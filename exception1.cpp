@@ -17,13 +17,17 @@ int main()
 
     }
 
-    catch(int &ex ) 
-    { 
-        cerr << " The arithmatic calculation is wrongly done"<<"\n";
-    }
-    catch(string &negtive)  // for, if values are negative.
-    { 
-        cerr << negtive <<"\n";
+    // catch(int &ex ) 
+    // { 
+    //     cerr << " The arithmatic calculation is wrongly done"<<"\n";
+    // }
+    // catch(string &negtive)  // for, if values are negative.
+    // { 
+    //     cerr << negtive <<"\n";
+    // }
+    catch(...) // this will handle any kind of exception as we can say multiple type.
+    {
+        cerr<< "wrong values entered" << "\n";
     }
     cout<<" Bye "<< "\n";
 }
