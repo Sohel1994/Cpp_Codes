@@ -17,9 +17,13 @@ int main()
 
     }
 
-    catch(int &ex )
+    catch(int &ex ) 
     { 
         cerr << " The arithmatic calculation is wrongly done"<<"\n";
+    }
+    catch(string &negtive)  // for, if values are negative.
+    { 
+        cerr << negtive <<"\n";
     }
     cout<<" Bye "<< "\n";
 }
@@ -28,5 +32,7 @@ int calculate( int a, int b)
 {
     if (b == 0)
     throw 0;
+    if( a < 0 || b < 0)
+    throw string { " the values entered are negative"};
     return a/b;
 }
