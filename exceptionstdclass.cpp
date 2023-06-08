@@ -19,6 +19,19 @@ class illegalBalanceException :public std::exception
 
 };
 
+
+class insufficientbalance 
+{ 
+          public:
+          insufficientbalance() noexcept = default;
+          ~insufficientbalance() = default;
+          virtual const char* what () noexcept 
+          {
+            return " an insufficientbalance in the accouunt to withdraw";
+          }
+
+};
+
 class Account
 {
     protected:
@@ -57,8 +70,12 @@ class Test:public Account
     }
     
     virtual void withdraw(int w) override
-    {
-        cout<<" the withdraw amount is in Test class :" << amount-w <<"\n";
+    {   
+        amount = amount-w;
+        cout<<" the remaining amount balance  in Test class :" << amount <<"\n";
+        cout << "     "<< " \n";
+        if(amount<=0)
+        throw insufficientbalance{};
     }
      
     virtual void deposite(int d) override
@@ -76,15 +93,22 @@ class Test:public Account
 int main()
 {
     try 
-
     {
-     unique_ptr <Account> a = make_unique<Test> (-100);
-     cout << " Test object created on heap pointing by Account class unique pointer";
+     unique_ptr <Account> a = make_unique<Test> (200);
+     cout << " Test object created on heap pointing by Account class unique pointer"<< "\n";
+     a->withdraw(120);
+     cout<< " amount successfully withdrawn"<<"\n";
     }
 
     catch(illegalBalanceException &ex)
     {
            cout<< ex.what() << "\n";
     }
+  
+    catch(insufficientbalance &ex)
+    {
+           cout<< ex.what() << "\n";
+    }
+
 
 }
