@@ -40,10 +40,10 @@ class B
 class C:public B 
 {
    public:
-   virtual void fun1() // function can not be override in derived class
-   {
-     cout<<" I am class C fun1()"<<"\n";
-   }
+  //  virtual void fun1() // function can not be override in derived class
+  //  {
+  //    cout<<" I am class C fun1()"<<"\n";
+  //  }
     
    virtual void fun2() // function can not be override in derived class
    {
