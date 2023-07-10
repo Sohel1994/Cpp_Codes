@@ -92,6 +92,7 @@ int main()
     //   // copy contructor of unique pointers not possible.
     //   // unique_ptr <account> ptr5 = ptr4; // not possible
     //   // unique_ptr <account> ptr5 (ptr4);  // not possible 
+    //   unique_ptr<account> ptr5 = std::move(ptr4);
       
     //   if(!ptr4)
     //   cout<< " ==== ptr4 is null pointer ======" << "\n";
