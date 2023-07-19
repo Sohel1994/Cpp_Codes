@@ -39,54 +39,47 @@ ostream& operator<<(ostream& os, const A& b)
 int main()
 {
 
-     vector<int> v = { 2 , 4 , 1 , 5 , 3 };
-
-    //  sort( v.begin() , v.end());
-
-    // //  for( int elmnt : v)
-    // //  {
-    // //     cout << elmnt << ",";
-    // //  }
+    //  vector<int> v = { 2 , 4 , 1 , 5 , 3 };
  
-    // sort vector in assending order
-    sort( v.begin() , v.end());
-    vector<int> :: iterator i;
-    for ( i = v.begin() ;  i != v.end() ; i++)
-    {
-        cout << *i<< ",";
-    }
-
-    cout<<"\n=============================\n";
-
-    // reverse sort
-    reverse( v.begin() , v.end());
-    for ( i = v.begin() ;  i != v.end() ; i++)
-    {
-        cout << *i<< ",";
-    }
-   
-    cout<<"\n=============================\n";
-
-    // sum of vector elements is by accumulate.
-    int sum;
-    sum = accumulate(v.begin() , v.end() , 0); // 0 is init value of sum.
-
-    cout << " sum of vector is :" << sum ;
-
-    // vector<A>vec ;
-    // vector<A*>vec1;
-    // A a;
-    // A *b =  new A( 3 , "suraj");
-    // vec.push_back(a);
-    // vec1.push_back(b);
-
-    // for( auto i : vec)
+    // // sort vector in assending order
+    // sort( v.begin() , v.end());
+    // vector<int> :: iterator i;
+    // for ( i = v.begin() ;  i != v.end() ; i++)
     // {
-    //     cout << i;
+    //     cout << *i<< ",";
     // }
 
-    //  for( auto i : vec1)
-    //  {
-    //     cout<< *i;
-    //  }
+    // cout<<"\n=============================\n";
+
+    // // reverse sort
+    // reverse( v.begin() , v.end());
+    // for ( i = v.begin() ;  i != v.end() ; i++)
+    // {
+    //     cout << *i<< ",";
+    // }
+   
+    // cout<<"\n=============================\n";
+
+    // // sum of vector elements is by accumulate.
+    // int sum;
+    // sum = accumulate(v.begin() , v.end() , 0); // 0 is init value of sum.
+
+    // cout << " sum of vector is :" << sum ;
+
+    vector<A>vec ;
+    vector<A*>vec1;
+    A a;
+    A *b =  new A( 3 , "suraj");
+    vec.push_back(a);
+    vec1.push_back(b);
+
+    for( auto i : vec)
+    {
+        cout << i;
+    }
+
+     for( auto i : vec1)
+     {
+        cout<< *i;
+     }
 }
