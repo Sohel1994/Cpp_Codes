@@ -19,12 +19,29 @@ class myinfo
 
 };
 
+template<class Q , class S>
+Q* fun( Q*a , S *b)
+{
+   
+    *a = *a + *b ;
+    return a;
+
+}
+
 int main ()
 {
-    myinfo<int > t(20);
-    t.display();
-    myinfo<char> c('b');
-    c.display();
-    myinfo <string> q("sohel");
-    q.display();
+    // myinfo<int > t(20);
+    // t.display();
+    // myinfo<char> c('b');
+    // c.display();
+    // myinfo <string> q("sohel");
+    // q.display();
+    
+     int a = 6 ;
+     float b = 8;
+
+     int *p;
+
+     p = fun<int,float>(&a,&b);
+     cout << *p;
 }

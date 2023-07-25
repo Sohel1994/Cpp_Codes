@@ -35,7 +35,7 @@ ostream &operator<<(ostream &os ,const person &p) // oserator overloadin for str
 int main()
 {
       person p1 { 28 , "sohel"}; // init the structure parameter.
-      person p2 { 30 , "suraj"};
+      person p2 { 30 , "suraj"}; 
 
       person p3 = minfun(p1, p2);
 
